@@ -150,6 +150,7 @@ Transform:
   m_Children:
   - {fileID: 554735940}
   - {fileID: 1901994542}
+  - {fileID: 1100817534}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -165,8 +166,6 @@ GameObject:
   - component: {fileID: 554735944}
   - component: {fileID: 554735943}
   - component: {fileID: 554735942}
-  - component: {fileID: 554735941}
-  - component: {fileID: 554735945}
   m_Layer: 5
   m_Name: UI_MainCanvas
   m_TagString: Untagged
@@ -198,19 +197,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &554735941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554735939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb91cd9d98443c48bd32d3613f46f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausePressed: 0
 --- !u!114 &554735942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,18 +257,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &554735945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554735939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75e12919e234fc248863be907ee32d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &657599376
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +818,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018187723}
   m_CullTransparentMesh: 0
+--- !u!1 &1100817533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1100817534}
+  - component: {fileID: 1100817535}
+  - component: {fileID: 1100817536}
+  m_Layer: 0
+  m_Name: MGR_UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1100817534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100817533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000061035156, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 354686562}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100817535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100817533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e12919e234fc248863be907ee32d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 554735939}
+--- !u!114 &1100817536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100817533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb91cd9d98443c48bd32d3613f46f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePressed: 0
 --- !u!1 &1137919928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1301,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554735941}
+      - m_Target: {fileID: 1100817536}
         m_MethodName: OnControlsPress
         m_Mode: 1
         m_Arguments:
@@ -1496,7 +1528,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554735941}
+      - m_Target: {fileID: 1100817536}
         m_MethodName: OnOptionsPress
         m_Mode: 1
         m_Arguments:
@@ -1626,8 +1658,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554735941}
-        m_MethodName: OnPausePress
+      - m_Target: {fileID: 1100817535}
+        m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1756,7 +1788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554735941}
+      - m_Target: {fileID: 1100817536}
         m_MethodName: OnMainMenuPress
         m_Mode: 1
         m_Arguments:

@@ -6,6 +6,7 @@ public class SCR_Pausing : MonoBehaviour
 {
     
     private SCR_UIInteraction uiScript;
+    public GameObject pauseMenu;
 
     private bool isPaused = false;
 
@@ -17,17 +18,23 @@ public class SCR_Pausing : MonoBehaviour
     {
         if(uiScript.pausePressed)
         {
-            if(isPaused)
-            {
-                Time.timeScale = 0;
-                Debug.Log("Testing Pause");
-            }
-
-            else
-            {
-                Time.timeScale = 1;
-                Debug.Log("Testing Resume");
-            }
+            Time.timeScale = 0;
+            Debug.Log("Testing Pause");
+            pauseMenu.SetActive(true);
         }
+    }
+    public void CheckForUnpause()
+    {
+        if(!uiScript.pausePressed)
+        {
+            Unpause();
+        }
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 0;
+        Debug.Log("Testing Pause");
+        pauseMenu.SetActive(false);
     }
 }
