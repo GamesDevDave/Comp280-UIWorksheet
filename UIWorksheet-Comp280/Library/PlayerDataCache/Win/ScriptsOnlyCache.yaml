@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
@@ -20,9 +21,16 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/SCN_ControlsScene.unity:
     - Class: 1
@@ -45,6 +53,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11174}
     - Class: 114
       Script: {instanceID: 11372}
+    - Class: 114
+      Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 11568}
     - Class: 114
       Script: {instanceID: 11754}
     - Class: 114
@@ -217,9 +229,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11174}
     - Class: 114
+      Script: {instanceID: 11332}
+    - Class: 114
+      Script: {instanceID: 11334}
+    - Class: 114
       Script: {instanceID: 11372}
     - Class: 114
+      Script: {instanceID: 11666}
+    - Class: 114
       Script: {instanceID: 11754}
+    - Class: 114
+      Script: {instanceID: 11944}
     - Class: 114
       Script: {instanceID: 12134}
     - Class: 114
@@ -233,7 +253,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12614}
     - Class: 114
+      Script: {instanceID: 12950}
+    - Class: 114
       Script: {instanceID: 12962}
+    - Class: 114
+      Script: {instanceID: 12976}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
